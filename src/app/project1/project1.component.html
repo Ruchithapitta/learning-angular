@@ -1,0 +1,32 @@
+<p>project1 works!</p>
+{{title}}
+
+<div *ngIf="false">display hello world</div>
+<div *ngIf="isLogIn;else isLogOut">u are logged in</div>
+<ng-template #isLogOut>u are logged out</ng-template>
+<ul>
+    <li *ngFor="let i of list">
+        {{i}}
+    </li>
+</ul>
+<br>
+<ul>
+    <li *ngFor="let std of studentArr;trackBy:trackByData">
+        {{std.name}}
+    </li>
+</ul>
+<br>
+<ul [ngSwitch]="LogInName">
+    <li *ngSwitchCase="'user'">
+        <p>user loggedin</p>
+    </li>
+    <li *ngSwitchCase="'admin'">
+        <p>admin loggedin</p>
+    </li>
+    <li *ngSwitchDefault>
+        <p>login with name</p>
+    </li>
+</ul>
+<div style="text-align:center">
+    <p appCustomstyle>this is customdirective</p>
+</div>

@@ -1,0 +1,42 @@
+<p>test works!</p>
+<h1>{{appName}}</h1>
+<h2>event binding</h2>
+<button (click)="showData($event)">Click here</button><br>
+<input type="text" [value]="userName" />
+<p [class]="myCssClass">this comes in the view</p>
+<p [class]="myapplyCssClass">this does not</p>
+<p [style.color]="myParaColor">this color is styled</p>
+<p> hello {{userName}}</p>
+<input type="text" [(ngModel)]="userName" />
+
+<div Class="container">
+    <div *ngFor="let user of users" [ngClass]="{'highlight':user.userName==='User1'}">
+        {{user.userName}}
+    </div>
+</div>
+
+<ng-template [ngIf]="true">
+    <div>
+        <h3>ng-template works</h3>
+    </div>
+</ng-template>
+<div>
+    <ng-template ngFor let-item [ngForOf]="fruits" let-i="index">
+        <p>{{i}}</p>
+    </ng-template>
+</div>
+<app-child [myName]="name"></app-child>
+
+<p>{{digits|digitcount}}</p>
+<p>{{presentDate}}</p>
+<p>{{presentDate|date}}</p>
+<p>{{presentDate|date:'shortDate'}}</p>
+<p>{{timeChange|async}}</p>
+<div style="text-align:center">
+    <p ngNonBindable>{{ jsonData }}</p> (1)
+    <p>{{ jsonData }}</p>
+    <p ngNonBindable>{{ jsonData | json }}</p>
+    <p>{{jsonData| json }}</p>
+</div>
+<app-debug></app-debug>
+<ng-content></ng-content>

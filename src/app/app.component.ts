@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular8';
+  
 }
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+function prime10000(): void {
+  throw new Error('Function not implemented.');
+}
+
